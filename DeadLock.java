@@ -28,6 +28,7 @@ class Monitor {
 }
 
 class Runner extends Thread {
+   @GuardedBy("this")
    Monitor m1, m2;
 		
    public Runner (Monitor m1, Monitor m2) { 
